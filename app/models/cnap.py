@@ -12,7 +12,7 @@ class Cnap(Model):
 
     id = Column(UUID(as_uuid=True), primary_key=True)
     cnap_id = Column(Integer, nullable=False)
-
-    ova_id = relationship(Ova)
+    #
+    # ova_id = relationship(Ova)
 
 

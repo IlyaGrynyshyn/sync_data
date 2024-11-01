@@ -1,7 +1,7 @@
 from env import env
 
 CONNECTION = {
-    "driver": "postgresql+psycopg2",
+    "driver": "postgresql+asyncpg",
     "host": env("DB_HOST"),
     "port": env("DB_PORT"),
     "username": env("DB_USERNAME"),
@@ -12,7 +12,7 @@ CONNECTION = {
 
 
 CREATE_IF_NOT_EXIST = [
-    "cnap.Cnap",
+    # "cnap.Cnap",
     "cnap_report.CnapReport",
-    "ova.Ova"
+    # "ova.Ova"
 ]
