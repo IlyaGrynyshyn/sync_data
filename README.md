@@ -50,3 +50,4 @@ GET https://guide.diia.gov.ua/api/v1/static_reports/detail/<report_entries_id>
 
 
 # sync_data
+# sync_data
