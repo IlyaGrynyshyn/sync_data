@@ -23,7 +23,7 @@ async def execute_command(argv):
 async def main():
     if (len(sys.argv) <= 1):
         raise ValueError(
-            'No valid arguments. First paramet must be command or proccess and name hanler (also support additional params), example: python main.py command migration')
+            'No valid arguments. First paramet must be command or proccess and name hanler (also support additional params), example: python main.py migration')
     await execute_command(sys.argv[1:])
 
 
