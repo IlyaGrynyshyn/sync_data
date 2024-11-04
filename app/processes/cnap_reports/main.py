@@ -15,7 +15,6 @@ log = init_logger_handler(loger_file)
 
 
 async def get_cnap_reports():
-    start_time = time()
     report_client = ReportApiClient(log_file=loger_file)
     all_data = await report_client.fetch_report()
     async with AsyncSession(CnapReport.engine) as session:
@@ -23,8 +22,6 @@ async def get_cnap_reports():
         db_service = ReportDBService(session, CnapReport)
 
         await db_service.upsert_records(all_data)
-
-    await log.info(f"Script executed in {time() - start_time:.2f} seconds")
 
 
 async def handler(*args):

@@ -12,7 +12,5 @@ CONNECTION = {
 
 
 CREATE_IF_NOT_EXIST = [
-    # "cnap.Cnap",
     "cnap_report.CnapReport",
-    # "ova.Ova"
 ]
