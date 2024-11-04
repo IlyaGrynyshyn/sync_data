@@ -5,6 +5,8 @@ from datetime import timedelta
 
 from loguru import logger
 
+from app.utils.benchmark import benchmark
+
 
 async def execute_command(argv):
     if argv[0] == 'migration':
@@ -18,8 +20,8 @@ async def execute_command(argv):
         handler = importlib.import_module(f'app.processes.{argv[1]}.main')
         await handler.handler(*argv[2:])
 
-
 @logger.catch
+@benchmark
 async def main():
     if (len(sys.argv) <= 1):
         raise ValueError(
